@@ -1,0 +1,21 @@
+Ariega - Potentiometer
+https://www.tinkercad.com/things/56wuF8K6t6V-terrific-jaban-fulffy/editel?sharecode=yW_bUeRy7U12fD2ED3r_mAYqY5rQtoSRwOyyuTos6HI
+
+int ledPin = 7;     
+int potentiometerPin = 1;  
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  int potentiometerValue = analogRead(potentiometerPin);
+
+ Serial.println(potentiometerValue);
+  if (potentiometerValue > 200) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+}
