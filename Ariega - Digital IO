@@ -1,0 +1,19 @@
+Ariega Blinking LED
+https://www.tinkercad.com/things/hMJb3HDgywy-smashing-jaban-robo/editel?sharecode=ZPTxC7bIOrBjiEo1R-6krJ5lJpzpUFCquGj3N-gkbPU&fbclid=IwAR07siJlF9Gyf1tcWO11JXVo8gQGrChrCIizpE4iM1jyXSBU1gK8ysoccZ0&sharecode=ZPTxC7bIOrBjiEo1R-6krJ5lJpzpUFCquGj3N-gkbPU
+
+int pin = 7; 
+
+void setup() {
+  pinMode(pin, OUTPUT);
+  Serial.begin(9600);
+}
+
+
+void loop() {
+  digitalWrite(pin, HIGH);
+  delay(500);
+  Serial.println("ON");
+  digitalWrite(pin, LOW);
+  delay(500); 
+  Serial.println("OFF");
+}
